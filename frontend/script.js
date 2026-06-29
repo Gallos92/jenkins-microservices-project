@@ -1,4 +1,4 @@
-const API_URL = 'http://api:5000';
+const API_URL = 'http://ac4f5cd98a9654806910e1a859a0995d-1031918367.us-east-1.elb.amazonaws.com:5000';
 
 fetch(API_URL + '/health')
   .then(res => res.json())
