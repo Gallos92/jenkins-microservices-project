@@ -1,12 +1,12 @@
 from flask import Flask, jsonify
-import os
+from flask_cors import CORS
 
 app = Flask(__name__)
-db_host = os.getenv('DB_HOST', 'localhost')
+CORS(app)
 
 @app.route("/")
 def home():
-    return jsonify({"service": "API", "status": "running", "db": db_host})
+    return jsonify({"service": "API", "status": "running", "db": "connected"})
 
 @app.route("/health")
 def health():
